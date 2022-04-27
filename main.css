@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Manrope', sans-serif;
+}
+
+body {
+	height: 100vh;
+	background-color: hsl(210, 46%, 95%);
+}
+
+.card {
+	position: absolute;
+	height: 300px;
+	width: 750px;
+	top: 50%;
+	left: 50%;
+	border-radius: 10px;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	overflow: hidden;
+	display: flex;
+}
+
+.right-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 37px;
+	width: 70%;
+	height: 100%;
+}
+
+.left-card {
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.drawers-img {
+	height: 100%;
+}
+
+.card-title {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 28px;
+	color: hsl(217, 19%, 35%);
+}
+
+.card-text {
+	font-size: 14px;
+	font-weight: 500;
+	color: hsl(217, 19%, 35%);
+}
+
+.share-bar {
+	display: none;
+}
+
+.bottom-bar {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+
+.avatar-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	bottom: 0;
+}
+
+.person {
+	position: absolute;
+	left: 60px;
+	font-size: 14px;
+	color: hsl(217, 19%, 35%);
+	line-height: 20px;
+}
+
+.name-surname {
+	font-weight: 700;
+}
+
+.arrow-btn {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+    transition: background-color .3s;
+}
+
+.arrow-btn:hover {
+	background-color: hsl(214, 17%, 51%);
+}
+
+
+
+.arrow-white {
+    display: none;
+}
+
+.attribution {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+}
