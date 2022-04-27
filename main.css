@@ -32,7 +32,6 @@ body {
 	width: 70%;
 	height: 100%;
 	z-index: -1;
-	
 }
 
 .left-card {
@@ -93,11 +92,11 @@ body {
 	border-radius: 50%;
 	border: none;
 	cursor: pointer;
-	transition: background-color 0.3s;
+	transition: background-color 0.5s;
 }
 
 .arrow-img {
-	transition: filter 3s;
+	transition: filter 0.1s;
 }
 
 .arrow-btn:hover {
@@ -108,13 +107,25 @@ body {
 	filter: brightness(100);
 }
 
-.share-bar {
+.share-bar::before {
 	position: absolute;
+	content: '';
+	width: 28px;
+	height: 28px;
+	background-color: hsl(217, 19%, 35%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%) rotate(45deg);
+	z-index: -200;
+}
+
+.share-bar {
 	display: flex;
+	position: absolute;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	height: 60px;
+	height: 45px;
 	width: 250px;
 	right: -70px;
 	bottom: 95px;
@@ -125,22 +136,26 @@ body {
 	letter-spacing: 5px;
 	color: hsl(210, 46%, 95%);
 	border-radius: 10px;
-	background-color:  hsl(217, 19%, 35%);
-	z-index: 20;
+	background-color: hsl(217, 19%, 35%);
 }
 
-.share-bar::before {
-	position: absolute;
-	content: '';
-	width: 30px;
-	height: 30px;
-	background-color: red;
-	top: 50%;
-	left: 50%;
-    transform: translate(50%, 50%) rotate(45deg) ;
+.share-bar {
+	display: none;
+}
 
 
+.icons {
+	cursor: pointer;
+	transition: transform .3s;
+}
 
+.icons:hover {
+	transform: scale(1.1);
+}
+
+
+.active {
+	display: flex;
 }
 
 
